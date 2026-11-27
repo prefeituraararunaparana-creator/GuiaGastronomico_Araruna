@@ -33,7 +33,7 @@ const ESTABELECIMENTOS = [
     categorias: ["padarias"],
     descricao: "Pães, doces e salgados.",
     endereco: "Rua Vítor Meireles, 721",
-    logo: "img/estabelecimentos/panificadora-sao-jose.webp",
+    logo: "img/estabelecimentos/panificadora-sao-jose.png",
     mapa: "https://www.google.com/maps/place/Panificadora+S%C3%A3o+Jos%C3%A9/@-23.9288234,-52.5002848,17z/data=!3m1!4b1!4m6!3m5!1s0x94ed6f2ea7f87b35:0xf8138d6fc0fe8472!8m2!3d-23.9288234!4d-52.5002848!16s%2Fg%2F11mw5322f4?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -41,8 +41,8 @@ const ESTABELECIMENTOS = [
     categorias: ["padarias"],
     descricao: "Pães, doces e salgados.",
     endereco: "Rua Vital Brasil, 681",
-    logo: "img/estabelecimentos/casa-do-pao.webp",
-    mapa: "https://www.google.com/maps/place/A+CASA+Do+P%C3%83O+-+P%C3%A3es,+Bolos+e+Salgados/@-23.9291741,-52.5015251,17z/data=!3m1!4b1!4m6!3m5!1s0x94ed6f1b57e0c5a7:0x980b1295e19214e6!8m2!3d-23.9291741!4d-52.5015251!16s%2Fg%2F11p3kk80yd?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
+    logo: "img/estabelecimentos/casa-do-pao.png",
+    mapa: "https://www.google.com/maps/place/R.+Vital+Brasil,+681+-+Araruna,+PR,+87260-000/@-23.9290992,-52.5016348,20z/data=!4m6!3m5!1s0x94ed6fc53dbef3d7:0x6b7b0f49450954bf!8m2!3d-23.9291146!4d-52.5016202!16s%2Fg%2F11f3jvq3fs?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
 
   // ---------- Sorveterias ----------
@@ -51,7 +51,7 @@ const ESTABELECIMENTOS = [
     categorias: ["sorveterias"],
     descricao: "Sorvetes, sobremesas e lanches.",
     endereco: "Av. Presidente Vargas, 581",
-    logo: "img/estabelecimentos/sorveteria-milkneve.webp",
+    logo: "img/estabelecimentos/sorveteria-milkneve.png",
     mapa: "https://www.google.com/maps/search/?api=1&query=Sorveteria%20Milkneve%2C%20Av.%20Presidente%20Vargas%2C%20581%2C%20Araruna%20-%20PR"
   },
   {
@@ -59,7 +59,7 @@ const ESTABELECIMENTOS = [
     categorias: ["sorveterias"],
     descricao: "Sorvetes e sobremesas.",
     endereco: "Rua Eraclides Gouveia",
-    logo: "img/estabelecimentos/sorveteria-new-big.webp",
+    logo: "img/estabelecimentos/sorveteria-new-big.png",
     mapa: "https://www.google.com/maps/place/New+Big+Sorvetes+e+A%C3%A7a%C3%AD/@-24.0375724,-52.3706233,21z/data=!4m6!3m5!1s0x94ed7525d12d0653:0x50f3e190952ffe48!8m2!3d-24.0375637!4d-52.3705268!16s%2Fg%2F11fjr46dr9?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
 
@@ -73,11 +73,19 @@ const ESTABELECIMENTOS = [
     mapa: "https://www.google.com/maps/search/?api=1&query=Roxito%20Açaí%20Burguer%2C%20Rua%20Eraclides%20Alves%20Gouveia%2C%20Araruna%20-%20PR"
   },
   {
+    nome: "Thiago Lanches",
+    categorias: ["lanchonetes"],
+    descricao: "Lanches.",
+    endereco: "Av. Paraná, 382",
+    logo: "img/estabelecimentos/thiago-lanches.png",
+    mapa: "https://www.google.com/maps/place/THIAGO+LANCHES/@-23.9298441,-52.4890091,616a,75y,171.48h,78.74t/data=!3m7!1e1!3m5!1ssmdncvSvYJCW7l9FSWAPQg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D11.259692091962819%26panoid%3DsmdncvSvYJCW7l9FSWAPQg%26yaw%3D171.48022530639304!7i16384!8i8192!4m10!1m2!2m1!1sthiago+lache!3m6!1s0x94ed6fba8911e15d:0xf48d2af4f4c19170!8m2!3d-23.929963!4d-52.4890438!15sCg10aGlhZ28gbGFuY2hlWg8iDXRoaWFnbyBsYW5jaGWSAQlzbmFja19iYXKaASRDaGREU1VoTk1HOW5TMFZKUTBGblNVTkNibGw1T1dkblJSQULgAQD6AQQIABBF!16s%2Fg%2F11h4c8ks3b?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
+  },
+  {
     nome: "Hot Dog do Guerino",
     categorias: ["lanchonetes"],
     descricao: "Cachorro-quente e lanches.",
     endereco: "Av. Presidente Vargas, 580b",
-    logo: "img/estabelecimentos/hot-dog-do-guerino.webp",
+    logo: "img/estabelecimentos/hot-dog-do-guerino.png",
     mapa: "https://www.google.com/maps/search/?api=1&query=Hot%20Dog%20do%20Guerino%2C%20Av.%20Presidente%20Vargas%2C%20580b%2C%20Araruna%20-%20PR"
   },
   {
