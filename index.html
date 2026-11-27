@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guia Gastronômico de Araruna</title>
+    <meta name="description" content="Padarias, sorveterias, lanchonetes, pizzarias e conveniências de Araruna-PR reunidas em um só lugar, com o caminho no Google Maps." />
+    <meta name="theme-color" content="#00082E" />
+    <link rel="icon" href="img/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@800&family=Albert+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="css/tema.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- BARRA DO TOPO (fica fixa ao rolar) -->
+    <header class="topo">
+      <div class="wrap topo-conteudo">
+        <a href="#inicio" class="topo-marca" aria-label="Guia Gastronômico de Araruna, ir para o início">
+          <img src="img/night-run.webp" width="480" height="310" alt="" class="topo-logo" />
+          <span class="topo-nome">Guia Gastronômico</span>
+        </a>
+        <!-- menu horizontal (computador) -->
+        <nav class="nav-topo" aria-label="Categorias">
+          <ul id="navTopo"><!-- preenchido pelo js/app.js --></ul>
+        </nav>
+        <!-- menu sanduíche (celular e tablet) -->
+        <button class="btn-menu" id="btnMenu" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- MENU SANDUÍCHE -->
+    <div class="menu-fundo" id="menuFundo" hidden></div>
+    <nav class="menu" id="menu" aria-label="Categorias" hidden>
+      <div class="menu-cabeca">
+        <span class="menu-titulo">Menu</span>
+        <button class="btn-fechar" id="btnFechar" aria-label="Fechar menu">✕</button>
+      </div>
+      <ul class="menu-lista" id="menuLista">
+        <!-- preenchido pelo js/app.js -->
+      </ul>
+    </nav>
+
+    <main>
+      <!-- TELA: INÍCIO -->
+      <section id="tela-inicio" class="tela">
+        <div class="faixa faixa-inicio">
+          <img class="faixa-foto" src="img/fundo-header.webp" alt="" width="1200" height="540" />
+          <div class="wrap">
+            <h1>Guia Gastronômico de Araruna</h1>
+            <p class="faixa-texto">Padarias, sorveterias, lanchonetes, pizzarias e conveniências da cidade reunidas em um só lugar.</p>
+          </div>
+        </div>
+
+        <!-- FAIXA DO EVENTO: apague este bloco depois da corrida, ou troque o texto -->
+        <div class="wrap">
+          <aside class="aviso-evento">
+            <strong>Veio para a Araruna 72 anos Night Run?</strong>
+            <p>Escolha uma categoria e veja como chegar aos estabelecimentos da cidade.</p>
+          </aside>
+        </div>
+        <!-- FIM DA FAIXA DO EVENTO -->
+
+        <section class="wrap secao" aria-labelledby="titulo-categorias">
+          <h2 class="secao-titulo" id="titulo-categorias">Escolha uma categoria</h2>
+          <ul class="grade-categorias" id="gradeCategorias">
+            <!-- preenchido pelo js/app.js -->
+          </ul>
+        </section>
+      </section>
+
+      <!-- TELA: CATEGORIA (padarias, pizzarias...) -->
+      <section id="tela-categoria" class="tela" hidden>
+        <div class="faixa faixa-categoria">
+          <div class="wrap faixa-categoria-linha">
+            <div class="faixa-categoria-titulo">
+              <h1 id="tituloCategoria">Categoria</h1>
+              <p class="faixa-texto" id="contagemCategoria"></p>
+            </div>
+            <a href="#inicio" class="voltar">← Início</a>
+          </div>
+        </div>
+
+        <div class="wrap secao">
+          <ul class="lista-cards" id="listaCards">
+            <!-- cards gerados pelo js/app.js a partir de js/estabelecimentos.js -->
+          </ul>
+          <p class="vazio" id="vazio" hidden>Ainda não há estabelecimentos cadastrados nesta categoria.</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- RODAPÉ -->
+    <footer class="rodape">
+      <div class="wrap rodape-grade">
+        <img class="rodape-logo" src="img/night-run-branco.webp" width="480" height="310" alt="Araruna 72 anos Night Run" loading="lazy" />
+        <div class="rodape-texto">
+          <strong>Guia Gastronômico de Araruna</strong>
+          <p>Diretoria de Indústria e Comércio</p>
+          <p>Araruna, PR</p>
+        </div>
+        <div class="rodape-gov">
+          <p class="rodape-gov-rotulo">Realização:</p>
+          <img src="img/prefeitura-araruna.webp" width="488" height="158" alt="Prefeitura Municipal de Araruna" loading="lazy" />
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/estabelecimentos.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

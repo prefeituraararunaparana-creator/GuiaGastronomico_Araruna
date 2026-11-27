@@ -1,0 +1,39 @@
+/* =========================================================
+   TEMA VISUAL: Araruna 72 anos Night Run
+   ---------------------------------------------------------
+   Para mudar a "cara" do guia no futuro, edite só este
+   arquivo (cores, fontes, cantos). O layout fica em style.css.
+   ========================================================= */
+
+:root {
+  /* Cores */
+  --cor-fundo: #F6F9FC;          /* fundo claro da página */
+  --cor-fundo-2: #EDF1F6;
+  --cor-card: #FCFDFF;
+  --cor-escura: #00082E;         /* azul-noite: header, rodapé, títulos */
+  --cor-escura-2: #0A1340;
+  --cor-texto-suave: #566074;
+  --cor-texto-sobre-escuro: #B4BFCE;
+  --cor-linha: #D3D9E2;
+  --cor-linha-forte: #273E5C;
+  --cor-linha-sobre-escuro: #26355F;
+
+  --cor-destaque: #FF7800;       /* laranja da logo: botões */
+  --cor-destaque-texto: #00082E; /* texto em cima do laranja */
+  --cor-destaque-forte: #C85300;
+
+  /* Camadas do header sobre a foto */
+  --escuro-96: rgba(0, 8, 46, 0.96);
+  --escuro-88: rgba(0, 8, 46, 0.88);
+  --escuro-60: rgba(0, 8, 46, 0.6);
+  --escuro-45: rgba(0, 8, 46, 0.45);
+  --escuro-12: rgba(0, 8, 46, 0.12);
+
+  /* Fontes */
+  --fonte-titulo: "Saira Condensed", "Arial Narrow", sans-serif;
+  --fonte-texto: "Albert Sans", ui-sans-serif, "Segoe UI", sans-serif;
+  --peso-titulo: 800;
+
+  /* Formas */
+  --raio: 4px;
+}
