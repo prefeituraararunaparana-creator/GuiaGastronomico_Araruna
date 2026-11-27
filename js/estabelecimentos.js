@@ -62,6 +62,14 @@ const ESTABELECIMENTOS = [
     logo: "img/estabelecimentos/sorveteria-new-big.png",
     mapa: "https://www.google.com/maps/place/New+Big+Sorvetes+e+A%C3%A7a%C3%AD/@-24.0375724,-52.3706233,21z/data=!4m6!3m5!1s0x94ed7525d12d0653:0x50f3e190952ffe48!8m2!3d-24.0375637!4d-52.3705268!16s%2Fg%2F11fjr46dr9?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
+  {
+    nome: "Cantinho da Felicidade",
+    categorias: ["sorveterias"],
+    descricao: "Sorvete americano e crepe suiço.",
+    endereco: "Rua Eraclides Gouveia",
+    logo: "img/estabelecimentos/cantinho-da-felicidade.png",
+    mapa: "https://www.google.com/maps/place/Espa%C3%A7o+Felicitt%C3%A1+Eventos/@-23.9317327,-52.4977053,619a,75y,221.02h,83.31t/data=!3m7!1e1!3m5!1sFLBH8abPV6l_0kprodFraQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D6.691427512692599%26panoid%3DFLBH8abPV6l_0kprodFraQ%26yaw%3D221.01594925166776!7i16384!8i8192!4m6!3m5!1s0x94ed6ff2a43478eb:0xe6c01fb83a13ee9f!8m2!3d-23.932497!4d-52.4749488!16s%2Fg%2F11p_7c7649?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
+  },
 
   // ---------- Lanchonetes ----------
   {
@@ -69,7 +77,7 @@ const ESTABELECIMENTOS = [
     categorias: ["lanchonetes"],
     descricao: "Açaí e lanches.",
     endereco: "Rua Eraclides Alves Gouveia",
-    logo: "img/estabelecimentos/roxito-acai-burguer.webp",
+    logo: "img/estabelecimentos/roxito-acai-burguer.png",
     mapa: "https://www.google.com/maps/search/?api=1&query=Roxito%20Açaí%20Burguer%2C%20Rua%20Eraclides%20Alves%20Gouveia%2C%20Araruna%20-%20PR"
   },
   {
@@ -93,7 +101,7 @@ const ESTABELECIMENTOS = [
     categorias: ["lanchonetes", "pizzarias"],
     descricao: "Lanches e pizzas.",
     endereco: "Av. Paraná, 698",
-    logo: "img/estabelecimentos/kenilanches-e-pizzas.webp",
+    logo: "img/estabelecimentos/kenilanches-e-pizzas.png",
     mapa: "https://www.google.com/maps/place/Kenilanches/@-23.9296365,-52.4878883,619a,75y,220.26h,90t/data=!3m7!1e1!3m5!1se548ie6u4t9Hac9YE048-w!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3De548ie6u4t9Hac9YE048-w%26yaw%3D220.26451013325544!7i16384!8i8192!4m6!3m5!1s0x94ed6e2c3c01334b:0x772a206f7a65eb35!8m2!3d-23.9297027!4d-52.4879426!16s%2Fg%2F11ckq_ghb5?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -101,7 +109,7 @@ const ESTABELECIMENTOS = [
     categorias: ["lanchonetes", "pizzarias"],
     descricao: "Lanches e pizzas.",
     endereco: "Rua Deoclécio Manoel Teixeira",
-    logo: "img/estabelecimentos/fome-zero.webp",
+    logo: "img/estabelecimentos/fome-zero.png",
     mapa: "https://www.google.com/maps/@-23.9295978,-52.4979272,615a,75y,258.41h,81.84t/data=!3m7!1e1!3m5!1seaDCNjUyuADvfOMk8lgz9A!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D8.156305443519727%26panoid%3DeaDCNjUyuADvfOMk8lgz9A%26yaw%3D258.4064337076628!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
 
@@ -111,7 +119,7 @@ const ESTABELECIMENTOS = [
     categorias: ["pizzarias"],
     descricao: "Pizzas.",
     endereco: "Rua Vital Brasil, 570",
-    logo: "img/estabelecimentos/pizzaria-pizza-d-casa.webp",
+    logo: "img/estabelecimentos/pizzaria-pizza-d-casa.png",
     mapa: "https://www.google.com/maps/place/PIZZA+D'CASA/@-23.9306143,-52.501599,595a,75y,116.41h,89.24t/data=!3m7!1e1!3m5!1sGYdg6KejOfwBFLCrGVSpHA!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0.7600214148205993%26panoid%3DGYdg6KejOfwBFLCrGVSpHA%26yaw%3D116.40505532251254!7i16384!8i8192!4m6!3m5!1s0x94ed6f543fd39d95:0x6bdb62e19cfdf3be!8m2!3d-23.9306436!4d-52.5015071!16s%2Fg%2F11tpbfqv01?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
 
@@ -121,7 +129,7 @@ const ESTABELECIMENTOS = [
     categorias: ["restaurantes"],
     descricao: "Refeições e espetinhos.",
     endereco: "Av. Presidente Vargas, 390",
-    logo: "img/estabelecimentos/ki-delicia.webp",
+    logo: "img/estabelecimentos/ki-delicia.png",
     mapa: "https://www.google.com/maps/@-23.9342945,-52.497475,618a,75y,193.33h,90t/data=!3m7!1e1!3m5!1sBTo3aEomDyHDtn-nmtFQBQ!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D0%26panoid%3DBTo3aEomDyHDtn-nmtFQBQ%26yaw%3D193.33087!7i16384!8i8192?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
   {
@@ -129,7 +137,7 @@ const ESTABELECIMENTOS = [
     categorias: ["restaurantes"],
     descricao: "Refeições.",
     endereco: "Rua Duque de Caxias, 151",
-    logo: "img/estabelecimentos/sabor-caseiro.webp",
+    logo: "img/estabelecimentos/sabor-caseiro.png",
     mapa: "https://www.google.com/maps/place/Restaurante+V%C3%B3+Maria+toque+caseiro/@-23.9293835,-52.4962499,611a,75y,17.37h,83.84t/data=!3m7!1e1!3m5!1sCaBPjLZBuIp61uMyIh4IIw!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D6.162809348753683%26panoid%3DCaBPjLZBuIp61uMyIh4IIw%26yaw%3D17.37018080186391!7i16384!8i8192!4m6!3m5!1s0x94ed6fd4f181d8f7:0x8279e7b8be09096a!8m2!3d-23.9291643!4d-52.4962105!16s%2Fg%2F11w56dgz02?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
 
@@ -139,7 +147,7 @@ const ESTABELECIMENTOS = [
     categorias: ["conveniencias"],
     descricao: "Bebidas, conveniência e espetinhos.",
     endereco: "Rua Deoclécio Manoel Teixeira, 424",
-    logo: "img/estabelecimentos/ramos-conveniencia.webp",
+    logo: "img/estabelecimentos/ramos-conveniencia.png",
     mapa: "https://www.google.com/maps/place/Ramos+Conveni%C3%AAncia/@-23.9299614,-52.4979707,616a,75y,88.53h,90.74t/data=!3m7!1e1!3m5!1sgO_cKKNji2qRHMuTtgOAeg!2e0!6shttps:%2F%2Fstreetviewpixels-pa.clients6.google.com%2Fv1%2Fthumbnail%3Fcb_client%3Dmaps_sv.tactile%26w%3D900%26h%3D600%26pitch%3D-0.7352683046124184%26panoid%3DgO_cKKNji2qRHMuTtgOAeg%26yaw%3D88.52839518937918!7i16384!8i8192!4m15!1m7!3m6!1s0x94ed6f6587bd9d3d:0x13817de8b4bdb78c!2sRamos+Conveni%C3%AAncia!8m2!3d-23.9307096!4d-52.497865!16s%2Fg%2F11f9wwsv4l!3m6!1s0x94ed6f6587bd9d3d:0x13817de8b4bdb78c!8m2!3d-23.9307096!4d-52.497865!10e5!16s%2Fg%2F11f9wwsv4l?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   }
 ];
