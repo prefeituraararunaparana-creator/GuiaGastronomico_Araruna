@@ -13,7 +13,7 @@ body {
   display: flex;
   flex-direction: column;
   background: var(--cor-fundo);
-  color: var(--cor-escura);
+  color: var(--cor-texto);
   font-family: var(--fonte-texto);
   font-size: 1rem;
   line-height: 1.5;
@@ -286,36 +286,37 @@ button { font: inherit; }
 .grade-categorias {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 12px;
+  gap: 8px;
 }
 .categoria {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 4px;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
   height: 100%;
-  min-height: 128px;
-  padding: 16px;
+  min-height: 56px;
+  padding: 8px 12px;
   border: 1px solid var(--cor-linha);
   border-radius: var(--raio);
   background: var(--cor-card);
   text-decoration: none;
   transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease;
 }
-.categoria:hover { transform: translateY(-4px); border-color: var(--cor-destaque); box-shadow: 0 12px 24px var(--escuro-12); }
+.categoria:hover { transform: translateY(-2px); border-color: var(--cor-destaque); box-shadow: 0 8px 16px var(--escuro-12); }
 .categoria:active { transform: translateY(0); }
-.categoria-icone { font-size: 2.2rem; line-height: 1; margin-bottom: auto; }
+.categoria-textos { min-width: 0; }
+.categoria-icone { flex: none; font-size: 1.5rem; line-height: 1; }
 .categoria-nome {
-  margin-top: 12px;
+  display: block;
   font-family: var(--fonte-titulo);
   font-weight: var(--peso-titulo);
-  font-size: clamp(1.1rem, 4.6vw, 1.35rem);
+  font-size: 1rem;
   line-height: 1.05;
   text-transform: uppercase;
-  max-width: 100%;
+  min-width: 0;
   overflow-wrap: anywhere;
 }
-.categoria-qtd { color: var(--cor-texto-suave); font-size: 0.875rem; font-weight: 500; }
+.categoria-qtd { display: block; color: var(--cor-texto-suave); font-size: 0.75rem; font-weight: 500; }
 
 /* ---------- Cards dos estabelecimentos ---------- */
 
@@ -330,7 +331,7 @@ button { font: inherit; }
   gap: 14px;
   padding: 16px;
   border: 1px solid var(--cor-linha);
-  border-top: 2px solid var(--cor-escura);
+  border-top: 2px solid var(--cor-texto);
   border-radius: var(--raio);
   background: var(--cor-card);
 }
@@ -345,7 +346,7 @@ button { font: inherit; }
   overflow: hidden;
   border: 1px solid var(--cor-linha);
   border-radius: var(--raio);
-  background: #fff;
+  background: var(--cor-logo-fundo);
 }
 .card-logo img { width: 100%; height: 100%; object-fit: contain; padding: 4px; }
 .card-logo.sem-logo { background: var(--cor-fundo-2); font-size: 2rem; }
@@ -424,7 +425,7 @@ button { font: inherit; }
 
 @media (min-width: 640px) {
   .wrap { padding-inline: 32px; }
-  .grade-categorias { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  .grade-categorias { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
   .lista-cards { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 20px; }
   .faixa-inicio .wrap { padding-block: 48px 52px; }
   .rodape-grade { grid-template-columns: 180px minmax(0, 1fr); align-items: center; }
@@ -437,7 +438,6 @@ button { font: inherit; }
   .wrap { padding-inline: 48px; }
   .topo-logo { width: 88px; }
   .grade-categorias { grid-template-columns: repeat(6, minmax(0, 1fr)); }
-  .categoria { min-height: 160px; padding: 20px; }
   .lista-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
   .faixa-inicio .wrap { padding-block: 72px 76px; }
   .secao { padding-block: 48px 8px; }

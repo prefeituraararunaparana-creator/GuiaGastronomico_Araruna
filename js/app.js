@@ -50,6 +50,10 @@ function contar(idCategoria) {
 
 // Se o link do Maps ainda não foi colado, busca pelo nome + endereço no Google Maps
 function linkMapa(est) {
+  // usarCoordenadas: true no cadastro = rota direto para a posição do pino (evita achar outro lugar de mesmo nome)
+  if (est.usarCoordenadas && typeof est.lat === "number" && typeof est.lng === "number") {
+    return `https://www.google.com/maps/dir/?api=1&destination=${est.lat},${est.lng}`;
+  }
   if (est.mapa && est.mapa.startsWith("http") && !est.mapa.includes("COLE-O-LINK")) {
     return est.mapa;
   }
@@ -88,12 +92,17 @@ function montarMenu() {
     const botao = criar("a", "categoria");
     botao.href = `#${cat.id}`;
     botao.appendChild(criar("span", "categoria-icone", cat.icone));
-    botao.appendChild(criar("span", "categoria-nome", cat.nome));
+    const textos = criar("span", "categoria-textos");
+    textos.appendChild(criar("span", "categoria-nome", cat.nome));
     const n = contar(cat.id);
-    botao.appendChild(criar("span", "categoria-qtd", n === 1 ? "1 local" : `${n} locais`));
+    textos.appendChild(criar("span", "categoria-qtd", n === 1 ? "1 local" : `${n} locais`));
+    botao.appendChild(textos);
     item.appendChild(botao);
     gradeCategorias.appendChild(item);
   });
+
+  // MAPA: link no menu que leva ao mapa da tela inicial
+  adicionarLink("mapa", "🗺️ Mapa", "Mapa");
 }
 
 function abrirMenu() {
@@ -195,6 +204,7 @@ function mostrarInicio() {
   telaCategoria.hidden = true;
   telaInicio.hidden = false;
   document.title = "Guia Gastronômico de Araruna";
+  if (window.abrirMapa) window.abrirMapa(); // js/mapa.js: o mapa já aparece na tela inicial
 }
 
 // ---------- Navegação pelo endereço (#padarias, #pizzarias...) ----------
@@ -205,10 +215,13 @@ function rotear() {
   if (cat) mostrarCategoria(cat);
   else mostrarInicio();
 
+  const ativa = rota === "mapa" ? "mapa" : cat ? cat.id : "inicio";
   document.querySelectorAll(".menu-link, .nav-link").forEach((l) => {
-    l.classList.toggle("ativo", l.dataset.rota === (cat ? cat.id : "inicio"));
+    l.classList.toggle("ativo", l.dataset.rota === ativa);
   });
-  window.scrollTo(0, 0);
+  // #mapa abre a tela inicial já rolada até o mapa
+  if (rota === "mapa") document.getElementById("secao-mapa").scrollIntoView();
+  else window.scrollTo(0, 0);
 }
 
 montarMenu();

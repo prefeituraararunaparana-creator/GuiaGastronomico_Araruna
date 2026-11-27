@@ -1,0 +1,133 @@
+/* =========================================================
+   MAPA DO GUIA (tela #mapa)
+   Mapa noturno: base do OpenStreetMap invertida e escurecida
+   para o azul-noite do tema, com pinos laranja. Cores e fontes
+   vêm de css/tema.css.
+   ========================================================= */
+
+.mapa-chips { display: flex; gap: 8px; overflow-x: auto; scrollbar-width: none; padding-block: 2px; margin-bottom: 12px; }
+.mapa-chips::-webkit-scrollbar { display: none; }
+
+.mapa-chip {
+  flex: 0 0 auto;
+  min-height: 44px;
+  padding: 0 16px;
+  border: 2px solid var(--cor-texto);
+  border-radius: 999px;
+  background: var(--cor-card);
+  color: var(--cor-texto);
+  font-family: var(--fonte-texto);
+  font-size: 0.875rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 120ms ease, color 120ms ease;
+}
+.mapa-chip:hover { background: var(--cor-fundo-2); }
+.mapa-chip[aria-pressed="true"] { background: var(--cor-texto); color: var(--cor-fundo); }
+.mapa-chip:focus-visible { outline: 3px solid var(--cor-destaque-forte); outline-offset: 2px; }
+
+.mapa-area { position: relative; background: var(--cor-mapa-fundo); }
+.mapa {
+  height: calc(100vh - 260px);
+  height: calc(100dvh - 260px);
+  min-height: 420px;
+  background: var(--cor-mapa-fundo);
+}
+.mapa.leaflet-container { background: var(--cor-mapa-fundo); }
+.mapa .leaflet-tile-pane { filter: invert(1) grayscale(1) brightness(0.95) contrast(1.15); opacity: 0.72; }
+.mapa-aviso { padding: 24px 16px; color: var(--cor-claro); font-size: 1.125rem; }
+.mapa-nota { padding-block: 12px 4px; color: var(--cor-texto-suave); font-size: 0.9375rem; }
+
+.mapa-pino {
+  width: 20px; height: 20px; border-radius: 50%;
+  background: var(--cor-destaque); border: 3px solid var(--cor-escura);
+  box-shadow: 0 0 0 1px rgba(255, 120, 0, 0.5), 0 0 12px rgba(255, 120, 0, 0.85);
+}
+
+.mapa-pino-largada {
+  position: relative; width: 92px; height: 34px; display: grid; place-items: center;
+  background: var(--cor-claro); border: 2px solid var(--cor-destaque); border-radius: 4px;
+  box-shadow: 0 0 16px rgba(255, 120, 0, 0.9);
+}
+.mapa-pino-largada span {
+  font-family: var(--fonte-titulo); font-weight: 800; font-size: 16px; text-transform: uppercase;
+  letter-spacing: 0.02em; color: var(--cor-escura); line-height: 1;
+}
+.mapa-pino-largada::after {
+  content: ""; position: absolute; left: 50%; bottom: -8px; transform: translateX(-50%);
+  border: 7px solid transparent; border-top-color: var(--cor-destaque); border-bottom: 0;
+}
+
+/* Balões e controles no tema noturno */
+.mapa .leaflet-popup-content-wrapper, .mapa .leaflet-popup-tip {
+  background: var(--cor-escura-2); color: var(--cor-claro);
+  border: 1px solid rgba(255, 120, 0, 0.5); box-shadow: 0 6px 24px rgba(0, 0, 0, 0.5);
+}
+.mapa .leaflet-popup-content-wrapper { border-radius: 6px; }
+.mapa .leaflet-popup-close-button { color: var(--cor-texto-sobre-escuro); }
+.mapa .leaflet-control-zoom a { background: var(--cor-escura-2); color: var(--cor-claro); border-color: var(--cor-linha-sobre-escuro); }
+.mapa .leaflet-control-attribution { background: rgba(0, 8, 46, 0.8); color: var(--cor-texto-sobre-escuro); }
+.mapa .leaflet-control-attribution a { color: var(--cor-claro); }
+
+.mapa-popup { font-family: var(--fonte-texto); font-size: 15px; line-height: 1.4; min-width: 200px; }
+.mapa-popup strong { display: block; font-size: 16px; color: var(--cor-claro); }
+.mapa-popup p { margin: 2px 0; color: var(--cor-texto-sobre-escuro); }
+.mapa .mapa-popup-btn {
+  display: block; margin-top: 8px; padding: 10px 12px; border-radius: var(--raio);
+  background: var(--cor-destaque); color: var(--cor-destaque-texto);
+  font-family: var(--fonte-titulo); font-weight: 800; font-size: 16px; text-align: center;
+  text-decoration: none; text-transform: uppercase;
+}
+.mapa .mapa-popup-btn:hover { background: var(--cor-claro); }
+.mapa .mapa-popup-btn:focus-visible { outline: 3px solid var(--cor-claro); outline-offset: 2px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .mapa-chip { transition: none; }
+}
+
+#secao-mapa { scroll-margin-top: 84px; }
+
+/* ---------- Janela com a prévia do Google Maps ---------- */
+
+.mapa-janela { position: fixed; top: 0; left: 0; right: 0; bottom: 0; z-index: 2000; display: flex; align-items: center; justify-content: center; padding: 16px; }
+.mapa-janela[hidden] { display: none; }
+.mapa-janela-fundo { position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: var(--escuro-60); }
+.mapa-janela-caixa {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 560px;
+  max-height: 100%;
+  overflow: hidden;
+  border-top: 4px solid var(--cor-destaque);
+  border-radius: var(--raio);
+  background: var(--cor-card);
+  box-shadow: 0 24px 60px rgba(0, 8, 46, 0.5);
+}
+.mapa-janela-topo { display: flex; align-items: flex-start; justify-content: space-between; gap: 12px; padding: 16px 16px 12px; }
+.mapa-janela-titulos { min-width: 0; }
+.mapa-janela-titulos h3 { font-size: 1.35rem; line-height: 1.1; }
+.mapa-janela-titulos p { margin-top: 4px; color: var(--cor-texto-suave); font-size: 0.9375rem; }
+.mapa-janela-fechar {
+  flex: none; width: 44px; height: 44px;
+  border: 2px solid var(--cor-texto); border-radius: var(--raio);
+  background: transparent; color: var(--cor-texto); font-size: 1.1rem; cursor: pointer;
+}
+.mapa-janela-fechar:hover { background: var(--cor-texto); color: var(--cor-fundo); }
+.mapa-janela-fechar:focus-visible { outline: 3px solid var(--cor-destaque-forte); outline-offset: 2px; }
+.mapa-janela-frame { display: block; width: 100%; height: 420px; max-height: 55vh; border: 0; background: var(--cor-fundo-2); }
+.mapa-janela-rota {
+  display: block; margin: 12px 16px 16px; padding: 12px; border-radius: var(--raio);
+  background: var(--cor-destaque); color: var(--cor-destaque-texto);
+  font-family: var(--fonte-titulo); font-weight: 800; font-size: 1.1rem; text-align: center;
+  text-decoration: none; text-transform: uppercase;
+}
+.mapa-janela-rota:hover { background: var(--cor-texto); color: var(--cor-fundo); }
+.mapa-janela-rota:focus-visible { outline: 3px solid var(--cor-destaque-forte); outline-offset: 2px; }
+
+@media (max-width: 639px) {
+  .mapa-janela { padding: 0; align-items: flex-end; }
+  .mapa-janela-caixa { max-width: none; max-height: 92vh; border-radius: 12px 12px 0 0; }
+  .mapa-janela-frame { height: 56vh; }
+}

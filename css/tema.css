@@ -6,10 +6,15 @@
    ========================================================= */
 
 :root {
+  color-scheme: light dark;
   /* Cores */
   --cor-fundo: #F6F9FC;          /* fundo claro da página */
   --cor-fundo-2: #EDF1F6;
   --cor-card: #FCFDFF;
+  --cor-texto: #00082E;          /* cor dos textos e traços sobre o fundo da página */
+  --cor-claro: #F6F9FC;          /* texto claro sobre superfícies escuras (não muda no tema escuro) */
+  --cor-mapa-fundo: #3B3C3E;     /* cinza neutro do mapa (aparece onde os blocos do mapa ainda não carregaram) */
+  --cor-logo-fundo: #FFFFFF;     /* quadro branco atrás das logos dos estabelecimentos */
   --cor-escura: #00082E;         /* azul-noite: header, rodapé, títulos */
   --cor-escura-2: #0A1340;
   --cor-texto-suave: #566074;
@@ -36,4 +41,23 @@
 
   /* Formas */
   --raio: 4px;
+}
+
+/* =========================================================
+   TEMA ESCURO: segue o padrão do aparelho (celular ou computador).
+   Só troca as cores do miolo da página, para cinza neutro. Topo, rodapé
+   e faixas com foto continuam azul-noite (cor da marca) nos dois temas.
+   ========================================================= */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --cor-fundo: #1F2022;            /* cinza neutro, na linha do mapa */
+    --cor-fundo-2: #2A2B2E;
+    --cor-card: #2B2C2F;
+    --cor-texto: #ECEEF1;
+    --cor-texto-suave: #B0B4BA;
+    --cor-linha: #45474B;
+    --cor-linha-forte: #7A7D83;
+    --cor-destaque-forte: #FF9A3C;   /* foco e sublinhados: laranja mais claro, legível no escuro */
+    --escuro-12: rgba(0, 0, 0, 0.45);
+  }
 }

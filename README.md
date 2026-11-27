@@ -10,6 +10,9 @@ css/tema.css                cores, fontes e cantos: mude aqui para trocar o visu
 css/style.css               layout e responsividade
 js/estabelecimentos.js      CADASTRO dos estabelecimentos
 js/app.js                   monta menu, categorias e cards
+js/mapa.js                  tela #mapa (Leaflet, carregado só quando abre)
+css/mapa.css                visual do mapa noturno
+vendor/leaflet/             Leaflet 1.9.4 hospedado junto (sem depender de CDN)
 img/                        logos do evento, da Prefeitura e foto do topo
 img/estabelecimentos/       logos dos estabelecimentos
 .github/workflows/static.yml  publicação automática no GitHub Pages
@@ -31,14 +34,15 @@ img/estabelecimentos/       logos dos estabelecimentos
 },
 ```
 
-3. Para pegar o link do mapa: no Google Maps, toque no local, depois em **Compartilhar** e em **Copiar link**.
+3. Para o pino aparecer na aba **Mapa**, preencha também `lat` e `lng` (no Google Maps, toque e segure no local: os números aparecem na busca). Sem eles o estabelecimento fica só na lista.
+4. Para pegar o link do mapa: no Google Maps, toque no local, depois em **Compartilhar** e em **Copiar link**.
 
 Os cards aparecem em ordem alfabética dentro de cada categoria.
 
 ## Links diretos
 
 Cada categoria tem endereço próprio, útil para divulgar:
-`.../#padarias`, `.../#sorveterias`, `.../#lanchonetes`, `.../#pizzarias`, `.../#conveniencias`
+`.../#padarias`, `.../#sorveterias`, `.../#lanchonetes`, `.../#pizzarias`, `.../#restaurantes`, `.../#conveniencias` e `.../#mapa`
 
 ## Depois do evento
 

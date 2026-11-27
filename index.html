@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Saira+Condensed:wght@800&family=Albert+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="css/tema.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/mapa.css" />
   </head>
   <body>
     <!-- BARRA DO TOPO (fica fixa ao rolar) -->
@@ -50,16 +51,15 @@
         <div class="faixa faixa-inicio">
           <img class="faixa-foto" src="img/fundo-header.webp" alt="" width="1200" height="540" />
           <div class="wrap">
-            <h1>Veio para a Araruna 72 anos Night Run?</h1>
-            <p class="faixa-texto">Escolha uma categoria e veja como chegar aos estabelecimentos da cidade.</p>
+            <h1>Guia Gastronômico de Araruna</h1>
           </div>
         </div>
 
         <!-- FAIXA DO EVENTO: apague este bloco depois da corrida, ou troque o texto -->
         <div class="wrap">
           <aside class="aviso-evento">
-            <strong>Guia Gastronômico de Araruna</strong>
-            <p>Padarias, sorveterias, lanchonetes, pizzarias, restaurantes e conveniências da cidade reunidos em um só lugar.</p>
+            <strong>Veio para a Araruna 72 anos Night Run?</strong>
+            <p>Escolha uma categoria e veja como chegar aos estabelecimentos da cidade.</p>
           </aside>
         </div>
         <!-- FIM DA FAIXA DO EVENTO -->
@@ -69,6 +69,17 @@
           <ul class="grade-categorias" id="gradeCategorias">
             <!-- preenchido pelo js/app.js -->
           </ul>
+        </section>
+
+        <!-- MAPA: já aparece aqui, sem precisar clicar (Leaflet, js/mapa.js) -->
+        <section class="wrap secao" id="secao-mapa" aria-labelledby="titulo-mapa">
+          <h2 class="secao-titulo" id="titulo-mapa">Mapa</h2>
+          <div class="mapa-chips" id="mapaChips" role="group" aria-label="Filtrar o mapa por categoria"></div>
+          <div class="mapa-area">
+            <div id="mapa" class="mapa"></div>
+            <p class="mapa-aviso" id="mapaErro" hidden>O mapa não carregou agora. A lista de cada categoria e os botões "Como chegar" continuam funcionando.</p>
+          </div>
+          <p class="mapa-nota" id="mapaNota" hidden></p>
         </section>
       </section>
 
@@ -91,6 +102,7 @@
           <p class="vazio" id="vazio" hidden>Ainda não há estabelecimentos cadastrados nesta categoria.</p>
         </div>
       </section>
+
     </main>
 
     <!-- RODAPÉ -->
@@ -109,7 +121,25 @@
       </div>
     </footer>
 
+
+    <!-- JANELA COM A PRÉVIA DO GOOGLE MAPS (abre ao tocar em um pino do mapa; js/mapa.js) -->
+    <div class="mapa-janela" id="mapaJanela" hidden>
+      <div class="mapa-janela-fundo" id="mapaJanelaFundo"></div>
+      <div class="mapa-janela-caixa" role="dialog" aria-modal="true" aria-labelledby="mapaJanelaTitulo">
+        <div class="mapa-janela-topo">
+          <div class="mapa-janela-titulos">
+            <h3 id="mapaJanelaTitulo"></h3>
+            <p id="mapaJanelaEnd"></p>
+          </div>
+          <button type="button" class="mapa-janela-fechar" id="mapaJanelaFechar" aria-label="Fechar janela">✕</button>
+        </div>
+        <iframe id="mapaJanelaFrame" class="mapa-janela-frame" title="Prévia do local no Google Maps" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+        <a id="mapaJanelaRota" class="mapa-janela-rota" target="_blank" rel="noopener noreferrer">📍 Como chegar</a>
+      </div>
+    </div>
+
     <script src="js/estabelecimentos.js"></script>
+    <script src="js/mapa.js"></script>
     <script src="js/app.js"></script>
   </body>
 </html>
