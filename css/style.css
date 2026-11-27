@@ -207,7 +207,8 @@ button { font: inherit; }
   background: linear-gradient(180deg, var(--escuro-88) 0%, var(--escuro-88) 55%, var(--escuro-45) 100%);
 }
 .faixa-inicio .wrap { padding-block: 32px 36px; }
-.faixa-inicio h1 { font-size: clamp(2.4rem, 9vw, 4.75rem); max-width: 14ch; }
+.faixa-inicio h1 { font-size: clamp(2.4rem, 9vw, 4.75rem); max-width: none; }
+.h1-linha { display: block; }
 .faixa-texto {
   margin-top: 12px;
   max-width: 40ch;
