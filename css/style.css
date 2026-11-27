@@ -436,7 +436,7 @@ button { font: inherit; }
 @media (min-width: 1000px) {
   .wrap { padding-inline: 48px; }
   .topo-logo { width: 88px; }
-  .grade-categorias { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .grade-categorias { grid-template-columns: repeat(6, minmax(0, 1fr)); }
   .categoria { min-height: 160px; padding: 20px; }
   .lista-cards { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; }
   .faixa-inicio .wrap { padding-block: 72px 76px; }

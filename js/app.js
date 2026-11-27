@@ -10,6 +10,7 @@ const CATEGORIAS = [
   { id: "sorveterias",   nome: "Sorveterias",   icone: "🍦" },
   { id: "lanchonetes",   nome: "Lanchonetes",   icone: "🍔" },
   { id: "pizzarias",     nome: "Pizzarias",     icone: "🍕" },
+  { id: "restaurantes",  nome: "Restaurantes",  icone: "🍽️" },
   { id: "conveniencias", nome: "Conveniências", icone: "🏪" }
 ];
 
@@ -37,8 +38,23 @@ function criar(tag, classe, texto) {
   return el;
 }
 
+// aceita "categorias: [...]" (uma ou mais) ou "categoria: ..." (uma só)
+function pertence(est, idCategoria) {
+  const lista = est.categorias || [est.categoria];
+  return lista.includes(idCategoria);
+}
+
 function contar(idCategoria) {
-  return ESTABELECIMENTOS.filter((e) => e.categoria === idCategoria).length;
+  return ESTABELECIMENTOS.filter((e) => pertence(e, idCategoria)).length;
+}
+
+// Se o link do Maps ainda não foi colado, busca pelo nome + endereço no Google Maps
+function linkMapa(est) {
+  if (est.mapa && est.mapa.startsWith("http") && !est.mapa.includes("COLE-O-LINK")) {
+    return est.mapa;
+  }
+  const busca = `${est.nome}, ${est.endereco || ""}, Araruna - PR`;
+  return "https://www.google.com/maps/search/?api=1&query=" + encodeURIComponent(busca);
 }
 
 // ---------- Menu e grade de categorias ----------
@@ -146,7 +162,7 @@ function criarCard(est, cat) {
   }
 
   const botao = criar("a", "btn-mapa", TEXTO_BOTAO);
-  botao.href = est.mapa;
+  botao.href = linkMapa(est);
   botao.target = "_blank";
   botao.rel = "noopener noreferrer";
   botao.setAttribute("aria-label", `Como chegar: ${est.nome}, abre o Google Maps`);
@@ -157,7 +173,7 @@ function criarCard(est, cat) {
 
 function mostrarCategoria(cat) {
   const lista = ESTABELECIMENTOS
-    .filter((e) => e.categoria === cat.id)
+    .filter((e) => pertence(e, cat.id))
     .sort((a, b) => a.nome.localeCompare(b.nome, "pt-BR")); // ordem alfabética
 
   tituloCategoria.replaceChildren(
