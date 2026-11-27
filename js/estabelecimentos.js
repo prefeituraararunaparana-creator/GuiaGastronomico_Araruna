@@ -49,7 +49,7 @@ const ESTABELECIMENTOS = [
   {
     nome: "Sorveteria Milkneve",
     categorias: ["sorveterias"],
-    descricao: "Sorvetes, sobremesas e lanches.",
+    descricao: "Sorvetes",
     endereco: "Av. Presidente Vargas, 581",
     logo: "img/estabelecimentos/sorveteria-milkneve.png",
     mapa: "https://www.google.com/maps/search/?api=1&query=Sorveteria%20Milkneve%2C%20Av.%20Presidente%20Vargas%2C%20581%2C%20Araruna%20-%20PR"
