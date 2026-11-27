@@ -197,13 +197,13 @@ function mostrarCategoria(cat) {
 
   telaInicio.hidden = true;
   telaCategoria.hidden = false;
-  document.title = `${cat.nome} | Guia Gastronômico de Araruna`;
+  document.title = `${cat.nome} | Guia Gastronômico Araruna 72 anos Night Run`;
 }
 
 function mostrarInicio() {
   telaCategoria.hidden = true;
   telaInicio.hidden = false;
-  document.title = "Guia Gastronômico de Araruna";
+  document.title = "Guia Gastronômico Araruna 72 anos Night Run";
   if (window.abrirMapa) window.abrirMapa(); // js/mapa.js: o mapa já aparece na tela inicial
 }
 

@@ -446,8 +446,8 @@ button { font: inherit; }
   .rodape-gov img { width: 100%; }
 }
 
-/* Menu horizontal no lugar do sanduíche (telas largas) */
-@media (min-width: 1200px) {
+/* Menu horizontal no lugar do sanduíche (telas largas: o nome do guia é longo e o menu só cabe a partir de 1400px) */
+@media (min-width: 1400px) {
   .topo-conteudo { min-height: 72px; gap: 24px; }
   .topo-nome { white-space: nowrap; }
   .topo-marca { flex: none; }
