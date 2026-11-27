@@ -25,7 +25,7 @@ const ESTABELECIMENTOS = [
     categorias: ["padarias"],
     descricao: "Pães, doces e salgados.",
     endereco: "Av. 29 de Novembro, 411",
-    logo: "img/estabelecimentos/panificadora-pao-de-mel.webp",
+    logo: "img/estabelecimentos/panificadora-pao-de-mel.jpeg",
     mapa: "https://www.google.com/maps/place/Panificadora+P%C3%A3o+de+Mel/@-23.9304341,-52.4966634,17z/data=!3m1!4b1!4m6!3m5!1s0x94ed6fc53f92cb9d:0x34f32acfb19358b3!8m2!3d-23.9304341!4d-52.4966634!16s%2Fg%2F1td4l8mb?entry=ttu&g_ep=EgoyMDI2MTEyMy4wIKXMDSoASAFQAw%3D%3D"
   },
   {
